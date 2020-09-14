@@ -14,7 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
-    "test:coverage": "npm run test -- --coverage",
+    "test:coverage": "npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -37,5 +37,12 @@
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "jest-fetch-mock": "^3.0.3",
     "react-test-renderer": "^16.13.1"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/src/serviceWorker.js",
+      "/src/index.js"
+    ]
   }
 }
